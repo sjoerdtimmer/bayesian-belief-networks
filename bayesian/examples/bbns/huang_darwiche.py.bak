@@ -1,6 +1,6 @@
 '''The Example from Huang and Darwiche's Procedural Guide'''
-
-from bayesian.factor_graph import *
+from __future__ import division
+from bayesian.bbn import *
 from bayesian.utils import make_key
 
 
@@ -74,8 +74,7 @@ def f_h(e, g, h):
 
 
 if __name__ == '__main__':
-    g = build_graph(
+    g = build_bbn(
         f_a, f_b, f_c, f_d,
         f_e, f_f, f_g, f_h)
-    g.n_samples = 1000
     g.q()
